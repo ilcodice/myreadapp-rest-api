@@ -6,7 +6,7 @@ class AuthorSerializer(serializers.ModelSerializer):
     #TODO: specify wich fields should be considerd in the model
 
     #force django REST to recognize the method
-    name = serializers.CharField()
+    name = serializers.CharField(read_only=True)
     # Create a serialized method
     username = serializers.SerializerMethodField()
     # Serializerd method's implementation
